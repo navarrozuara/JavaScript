@@ -1,0 +1,47 @@
+body {
+	background-color: Gainsboro;
+	border: 1px solid black;
+	box-shadow: 0px 0px 5px black;
+	margin: 0 auto;
+	margin-top: 10px;
+	padding: 10px;
+	width: 90%;
+}
+
+header {
+	background-color: #3B5988;
+	border-radius: 20px 20px 0px 0px;
+	color: white;
+	padding: 1px;
+	text-align: center;
+}
+
+html {
+  background: #FFFFFF;
+}
+
+.contenido {
+	margin-left: 20px;
+	font-size: 16px;
+}
+
+.error {
+	color: #FF0000;
+	font-weight: bold;
+}
+
+.nombre {
+	margin-left: 3px;
+}
+
+.dia {
+	margin-left: 20px;
+}
+
+.mes {
+	margin-left: 15px;
+}
+
+.anio {
+	margin-left: 8px;
+}
