@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Elisa Navarro Zuara | JavaScript Tutorial</title>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+	<center><h1>JavaScript tutorial: Array</h1></center>
+	<h2>Ejercicios (F12 para ver resultado)</h2>
+	<ul>
+		<li><a href="ejercicios/Ejercicio1.html">Ejercicio 1</a></li>
+		<li><a href="ejercicios/Ejercicio2.html">Ejercicio 2</a></li>
+		<li><a href="ejercicios/Ejercicio3.html">Ejercicio 3</a></li>
+		<li><a href="ejercicios/Ejercicio4.html">Ejercicio 4</a></li>
+		<li><a href="ejercicios/Ejercicio5.html">Ejercicio 5</a></li>
+		<li><a href="ejercicios/Ejercicio6.html">Ejercicio 6</a></li>
+		<li><a href="ejercicios/Ejercicio7.html">Ejercicio 7</a></li>
+		<li><a href="ejercicios/Ejercicio8.html">Ejercicio 8</a></li>
+		<li><a href="ejercicios/Ejercicio9.html">Ejercicio 9</a></li>
+		<li><a href="ejercicios/Ejercicio10.html">Ejercicio 10</a></li>
+	</ul>
+	<h2>Preguntas</h2>
+	<ol>
+		<li>Declaración recomendada para la creación de arrays en JavaScript.</li>
+		<p>Se recomienda declarar arrays utilizando los corchetes [] en lugar de la llamada a new Array(), definiendo el array de forma literal:</p>
+		<pre>var array = ["Apple", "Orange", "Donkey", ...];</pre>
+		<li>pop() y push()</li>
+		<p></p>
+		<ol>
+			<li>Utilidad</li>
+			<p>El método pop() sirve para eliminar el útlimo elemento de un array.<br />
+			El método push() sirve para añadir elementos al final de un array.</p>
+			<li>¿Modifican el array original?</li>
+			<p>Si, modifican el array añadiendo o eliminando el elemento.</p>
+			<li>¿Devuelven algún valor?</li>
+			<p>Si, el método pop() devuelve el elemento eliminado, y push() devuelve la nueva longitud del array.</p>
+		</ol>	
+		<li>shift() y unshift()</li>
+		<p></p>
+		<ol>
+			<li>Utilidad</li>
+			<p>El método shift() sirve para eliminar el primer elemento de un array.<br />
+			El método unshift() sirve para añadir elementos al principio de un array.</p>
+			<li>¿Modifican el array original?</li>
+			<p>Si, modifican el array añadiendo o eliminando el elemento.</p>
+			<li>¿Devuelven algún valor?</li>
+			<p>Si, el método shift() devuelve el elemento eliminado, y unshift() devuelve la nueva longitud del array.</p>
+		</ol>
+		<li>De los cuatro métodos anteriores, indica los recomendados para la inserción/eliminación de un elemento y por qué.</li>
+		<p>Los métodos recomendados para la inserción/eliminación de un elemento son pop() y push() porque son más rápidos al no tener que reasignar las posiciones del resto de los elementos del array.</p>
+		<li>join() y split(), ¿son métodos de String o de Array?</li>
+		<p>join() es un método del objeto Array, y split() es un método del objeto String.</p>
+		<li>splice()</li>
+		<p></p>
+		<ol>
+			<li>Utilidad</li>
+			<p>El método splice() cambia el contenido de un array eliminando elementos existentes y/o añadiendo nuevos elementos.</p>
+			<li>Indica significado del primer argumento admitido: índice, cantidad o contenido</li>
+			<p>Índice donde se comenzará a cambiar el array.</p>
+			<li>Indica significado del segundo argumento admitido: índice, cantidad o contenido</li>
+			<p>Cantidad que indica el número de elementos del array que se tienen que eliminar. Si es igual a 0, no se eliminará ningún elemento.</p>
+			<li>Indica significado del resto de argumentos admitidos: índice, cantidad o contenido</li>
+			<p>Los elementos que se agregaran al array. Si no se especifica ningún elemento, splice() solamente eliminará elementos del array.</p>
+			<li>¿Modifica el array original?</li>
+			<p>Si, modifican el array añadiendo o eliminando los elementos.</p>
+		</ol>
+		<li>slice()</li>
+		<p></p>
+		<ol>
+			<li>Utilidad</li>
+			<p>El método slice() devuelve una copia de una parte del array dentro de un nuevo array.</p>
+			<li>Indica significado del primer argumento admitido: índice, cantidad o contenido</li>
+			<p>Índice donde empieza la extracción.</p>
+			<li>Indica significado del segundo argumento admitido: índice, cantidad o contenido</li>
+			<p>Índice que marca el fin a la extracción.</p>
+			<li>Indica significado del resto de argumentos admitidos: índice, cantidad o contenido</li>
+			<p>El método slice() no tiene más argumentos.</p>
+			<li>¿Modifica el array original?</li>
+			<p>No, el array original no se modifica.</p>
+		</ol>
+		<li>Un Array es un Object:</li>
+		<p></p>
+		<ol>
+			<li>Indica resultado de typeof []</li>
+			<p>Object</p>
+			<li>Método forEach() de un array. Indica utilidad y si funciona en todos los navegadores. Entrega un pequeño código que demuestre su uso.</li>
+			<p>El método forEach() ejecuta la función indicada una vez por cada elemento del array.</p>
+			<p>Sintaxis:</p>
+			<pre>array.forEach(callback[, thisArg])</pre>
+			<p>Ejemplo de uso:</p>
+			<pre>function logArrayElements(element, index, array) {
+	console.log("a[" + index + "] = " + element);
+}
+var array = [2, 5, 9];
+array.forEach(logArrayElements);</pre>
+			<p>El método forEach() es compatible con todos los navegadores excepto Opera Mini e IE8/9.</p>
+		</ol>
+	</ol>
+</body>
+</html>
