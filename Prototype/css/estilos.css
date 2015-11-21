@@ -1,0 +1,26 @@
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+table, tr, td {
+	border: 1px solid #EEEEEE;
+	border-collapse: collapse;
+	margin: auto;
+}
+
+th {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+pre {
+	background-color: #EEEEEE;
+	border: 1px solid grey;
+	border-radius: 5px 5px 5px 5px;
+	padding: 10px;
+	width: 35%;
+}
+
+#contenido {
+	text-align: center;
+}
