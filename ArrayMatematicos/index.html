@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Elisa Navarro Zuara | Arrays Matemáticos</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Elisa Navarro Zuara">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+	<script type="text/javascript" src="js/arrayMatematicos.js"></script>
+	<script type="text/javascript" src="js/ejercicio.js"></script>
+</head>
+<body>
+	<noscript>
+		<p>La página que estás visualizando requiere para su correcto funcionamiento el uso de JavaScript. Si lo has deshabilitado, por favor activalo.</p>
+	</noscript>
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#">Arrays Matemáticos</a>
+        </div>
+    </div>
+	<div class="container">
+		<br /><br /><br />
+		<h1>PseudoClase ArrayMatematicos</h1>
+		<p>Mediante prototype, agrega los métodos sumar, restar, trasponer y multiplicar a la clase ArraysMatematicos. Recuerda que el estado de un array deberían de ser los elementos. Recuerda las restricciones y posibilidades de un Array:</p>
+		<ol>
+			<li>Sobre las dimensines de los arrays implicados (unidimensional, bidimensional...).</li>
+			<li>Sobre las longitudes de los arrays implicados (1 en adelante).</li>
+			<li>Sobre los contenidos de los arrays implicados (numéricos).</li>
+			<li>Podemos rellenar un Array con valores aleatorios o directamente desde teclado.</li>
+		</ol>
+		<p>Una vez creada la clase, demuestra su funcionamiento en una página bien diseñada. Evita las cajas de texto y hazla lo más dinámica posible.</p>
+		<br />
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<strong><div id="msgErr" class="text-danger"></div></strong>
+			</div>
+			<br />
+			<div class="col-md-6 col-md-offset-3 well well-lg">
+				<article>
+            		<h2>Matriz 1</h2>
+            		<label class="col-sm-2 control-label">Filas:</label>
+            		<div class="col-sm-4">
+                        <input type="number" id="filas1" min="1" max="20" required />
+                    </div>
+                    <label class="col-sm-2 control-label">Columnas:</label>
+                    <div class="col-sm-4">
+                        <input type="number" id="columnas1" min="1" max="20" required />
+                    </div>
+                    <br />
+                    <h2>Matriz 2</h2>
+            		<label class="col-sm-2 control-label">Filas:</label>
+            		<div class="col-sm-4">
+                        <input type="number" id="filas2" min="1" max="20" required />
+                    </div>
+                    <label class="col-sm-2 control-label">Columnas:</label>
+                    <div class="col-sm-4">
+                        <input type="number" id="columnas2" min="1" max="20" required />
+                    </div>
+                    <br /><br /><br />
+					<div class="text-center">
+						<div class="btn-group">
+							<button type="button" id="sumar" class="btn btn-primary">Sumar</button>
+							<button type="button" id="restar" class="btn btn-primary">Restar</button>
+							<button type="button" id="multiplicar" class="btn btn-primary">Multiplicar</button>
+							<button type="button" id="trasponer" class="btn btn-primary">Trasponer</button>
+						</div>
+					</div>
+                </article>
+			</div>
+			<div class="col-md-6">
+				<div id="matriz1" class="lead text-center"></div>
+			</div>
+			<div class="col-md-6">
+				<div id="matriz2" class="lead text-center"></div>
+			</div>
+			<div class="col-md-6 col-md-offset-3 ">
+				<div id="resultado" class="lead text-center"></div>
+			</div>
+		</div>
+		<hr>
+		<footer>
+			<p>&copy; Elisa Navarro Zuara</p>
+		</footer>
+	</div>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
