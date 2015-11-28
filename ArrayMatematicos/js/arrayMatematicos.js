@@ -12,6 +12,8 @@ Evita las cajas de texto y hazla lo más dinámica posible.
 */
 
 function ArrayMatematicos(filas, columnas) {
+	if (filas < 1 || columnas < 1 )
+		throw new FilasColumnasError("El número de filas y columnas ha de ser mayor de 0.");
 	this.filas = filas;
 	this.columnas = columnas;
 	this.contenido = this.inicializarArray();
@@ -22,19 +24,21 @@ ArrayMatematicos.prototype.inicializarArray = function() {
 	for (var i = 0; i < this.filas; i++) {
 		matriz[i] = new Array();
 		for (var j = 0; j < this.columnas; j++)
-			matriz[i][j] = Math.round(Math.random()*11);
+			matriz[i][j] = Math.round(Math.random()*10);
 	}
 	return matriz;
 }
 
 ArrayMatematicos.prototype.mostrar = function() {
-	var cadena = "";
+	var cadena = "<table>";
 	for (var i = 0; i < this.filas; i++) {
+		cadena += "<tr>";
 		for (var j = 0; j < this.columnas; j++) {
-			cadena += this.contenido[i][j] + "	";
+			cadena += "<td>"+this.contenido[i][j]+"</td>";
 		}
-		cadena += "<br />";
+		cadena += "</tr>";
 	}
+	cadena += "</table>";
 	return cadena;
 }
 
@@ -50,11 +54,20 @@ ArrayMatematicos.prototype.comprobarDimensionesM = function(matriz) {
 	return false;
 }
 
+function FilasColumnasError(message) { 
+	this.name = "FilasColumnasError";
+	this.message = message; 
+}
+
+function DimensionesInvalidasError(message) { 
+	this.name = "DimensionesError";
+	this.message = message; 
+}
+
 ArrayMatematicos.prototype.sumar = function(matriz2) {
 	var resultado;
-	if (!this.comprobarDimensiones(matriz2)) {
-		throw new ExceptionDimensiones("Las dimensiones introducidas no son válidas. Las filas y las columnas de ambas matrices han de ser iguales.");
-	}
+	if (!this.comprobarDimensiones(matriz2)) 
+		throw new DimensionesInvalidasError("Las dimensiones introducidas no son válidas. Las filas y las columnas de ambas matrices han de ser iguales.");
 	resultado = new ArrayMatematicos(this.filas, this.columnas);
 	for (var i = 0; i < this.filas; i++)
 		for (var j = 0; j < this.columnas; j++)
@@ -64,9 +77,8 @@ ArrayMatematicos.prototype.sumar = function(matriz2) {
 
 ArrayMatematicos.prototype.restar = function(matriz2) {
 	var resultado;
-	if (!this.comprobarDimensiones(matriz2)) {
-		throw new ExceptionDimensiones("Las dimensiones introducidas no son válidas. Las filas y las columnas de ambas matrices han de ser iguales.");
-	}
+	if (!this.comprobarDimensiones(matriz2))
+		throw new DimensionesInvalidasError("Las dimensiones introducidas no son válidas. Las filas y las columnas de ambas matrices han de ser iguales.");
 	resultado = new ArrayMatematicos(this.filas, this.columnas);
 	for (var i = 0; i < this.filas; i++)
 		for (var j = 0; j < this.columnas; j++)
@@ -76,9 +88,8 @@ ArrayMatematicos.prototype.restar = function(matriz2) {
 
 ArrayMatematicos.prototype.multiplicar = function(matriz2) {
 	var resultado;
-	if (!this.comprobarDimensionesM(matriz2)) {
-		throw new ExceptionDimensiones("Las dimensiones introducidas no son válidas. Las columnas de la matriz1 han de coincidir con las filas de la matriz2.");
-	}
+	if (!this.comprobarDimensionesM(matriz2))
+		throw new DimensionesInvalidasError("Las dimensiones introducidas no son válidas. Las columnas de la matriz1 han de coincidir con las filas de la matriz2.");
 	resultado = new ArrayMatematicos(this.filas, matriz2.columnas);
 	for (var i = 0; i < this.filas; i++) {
 		for (var j = 0; j < matriz2.columnas; j++) {
@@ -96,10 +107,7 @@ ArrayMatematicos.prototype.trasponer = function() {
 	for (var i = 0; i < this.columnas; i++)
 		for (var j = 0; j < this.filas; j++)
 			traspuesta.contenido[i][j] = this.contenido[j][i];
-	return traspuesta;
-}
-
-function ExceptionDimensiones(mensaje) { 
-	this.mensaje = mensaje; 
-	this.nombre = "ExceptionDimensiones";
+	this.contenido = traspuesta.contenido;
+	this.filas = traspuesta.filas;
+	this.columnas = traspuesta.columnas;
 }

@@ -13,6 +13,8 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -20,7 +22,7 @@
     <![endif]-->
 
 	<script type="text/javascript" src="js/arrayMatematicos.js"></script>
-	<script type="text/javascript" src="js/ejercicio.js"></script>
+	<script type="text/javascript" src="js/principal.js"></script>
 </head>
 <body>
 	<noscript>
@@ -44,49 +46,52 @@
 		<p>Una vez creada la clase, demuestra su funcionamiento en una página bien diseñada. Evita las cajas de texto y hazla lo más dinámica posible.</p>
 		<br />
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-6 col-md-offset-3">
 				<strong><div id="msgErr" class="text-danger"></div></strong>
 			</div>
-			<br />
-			<div class="col-md-6 col-md-offset-3 well well-lg">
+			<br /><br />
+			<div class="col-md-6 col-md-offset-3">
 				<article>
             		<h2>Matriz 1</h2>
-            		<label class="col-sm-2 control-label">Filas:</label>
-            		<div class="col-sm-4">
-                        <input type="number" id="filas1" min="1" max="20" required />
+            		<label class="col-sm-2">Filas:</label>
+            		<div class="col-sm-3">
+                        <input type="number" class="form-control input-sm" id="filas1" required />
                     </div>
-                    <label class="col-sm-2 control-label">Columnas:</label>
-                    <div class="col-sm-4">
-                        <input type="number" id="columnas1" min="1" max="20" required />
+                    <label class="col-sm-2">Columnas:</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control input-sm" id="columnas1" required />
                     </div>
-                    <br />
+                    <br /><br />
                     <h2>Matriz 2</h2>
-            		<label class="col-sm-2 control-label">Filas:</label>
-            		<div class="col-sm-4">
-                        <input type="number" id="filas2" min="1" max="20" required />
+            		<label class="col-sm-2">Filas:</label>
+            		<div class="col-sm-3">
+                        <input type="number" class="form-control input-sm" id="filas2" required />
                     </div>
-                    <label class="col-sm-2 control-label">Columnas:</label>
-                    <div class="col-sm-4">
-                        <input type="number" id="columnas2" min="1" max="20" required />
+                    <label class="col-sm-2">Columnas:</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control input-sm" id="columnas2" required />
                     </div>
                     <br /><br /><br />
 					<div class="text-center">
 						<div class="btn-group">
+							<button type="button" id="generar" class="btn btn-primary">Generar matrices</button>
 							<button type="button" id="sumar" class="btn btn-primary">Sumar</button>
 							<button type="button" id="restar" class="btn btn-primary">Restar</button>
 							<button type="button" id="multiplicar" class="btn btn-primary">Multiplicar</button>
 							<button type="button" id="trasponer" class="btn btn-primary">Trasponer</button>
+							<button type="button" id="clear" class="btn btn-danger">Limpiar</button>
 						</div>
 					</div>
+					<br /><br /><br />
                 </article>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-4">
 				<div id="matriz1" class="lead text-center"></div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-4">
 				<div id="matriz2" class="lead text-center"></div>
 			</div>
-			<div class="col-md-6 col-md-offset-3 ">
+			<div class="col-md-4">
 				<div id="resultado" class="lead text-center"></div>
 			</div>
 		</div>
