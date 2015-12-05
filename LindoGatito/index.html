@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Elisa Navarro Zuara | Lindo gatito</title>
+	<meta name="author" content="Elisa Navarro Zuara">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<script type="text/javascript" src="js/gato.js"></script>
+	<script type="text/javascript" src="js/principal.js"></script>
+</head>
+<body>
+	<noscript>
+		<p>La página que estás visualizando requiere para su correcto funcionamiento el uso de JavaScript. Si lo has deshabilitado, por favor activalo.</p>
+	</noscript>
+	<div id="contenido">
+		<h1>Compañía de adopción de gatitos</h1>
+		<strong><div id="msgErr"></div></strong>
+		<form>
+			<p><label>Nombre</label> <input type="text" id="nombre"></p>
+			<p><label>Día</label> <input type="number" id="dia">
+			   <label>Mes</label> 
+				<select id="mes" name="mes">
+					<option value="1">Enero</option>
+					<option value="2">Febrero</option>
+					<option value="3">Marzo</option>
+					<option value="4">Abril</option>
+					<option value="5">Mayo</option>
+					<option value="6">Junio</option>
+					<option value="7">Julio</option>
+					<option value="8">Agosto</option>
+					<option value="9">Septiembre</option>
+					<option value="10">Octubre</option>
+					<option value="11">Noviembre</option>
+					<option value="12">Diciembre</option>	
+				</select>
+			   <label>Año</label> <input type="number" id="anio"></p>
+			<p><label>Raza</label>
+				<select id="raza" name="raza">
+					<option value="Siamés" selected>Siamés</option>
+					<option value="Persa">Persa</option>
+					<option value="Abisinio">Abisinio</option>
+					<option value="Maine Coon">Maine Coon</option>
+					<option value="Bengala">Bengala</option>
+					<option value="Siberiano">Siberiano</option>
+					<option value="Angora turco">Angora turco</option>
+					<option value="Bombay">Bombay</option>
+				</select></p>
+			<p><label>Peso (kg)</label> <input type="number" id="peso"></p>
+			<p><input type="button" id="crearGato" value="Crear gato"></p>
+		</form>
+		<br />
+	</div>
+</body>
+</html>

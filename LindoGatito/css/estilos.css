@@ -1,0 +1,54 @@
+body {
+	background: url('../img/background.jpg') no-repeat fixed center;
+	background-size: cover;
+	font-family: Helvetica, Arial, sans-serif;;
+}
+
+#contenido {
+	background: rgba(255,255,255,0.8);
+	margin: 0 auto;
+	width: 65%;
+}
+
+#msgErr {
+	color: #B71C1C;
+	font-size: 18px;
+	padding-left: 4%;
+}
+
+h1 {
+	margin: 15px;
+	padding: 2%;
+	font-size: 30px;
+	text-align: center; 
+}
+
+input[type=button] {
+	background-color: #BDBDBD;
+	border-radius: 5px;
+	display: block;
+	font-size: 20px;
+	margin: 0 auto;
+	padding: 5px 12px;
+	width: 30%; 
+}
+
+input[type=button]:hover {
+	background-color: #9E9E9E; 
+}
+
+input[type=text], input[type=number], select {
+	border-radius: 5px;
+	font-size: 16px;
+	padding: 5px 12px; 
+}
+
+input[type=text]:hover, input[type=number]:hover, select:hover {
+	background-color: #E0E0E0; 
+}
+
+label {
+	display: inline-block;
+	font-size: 20px;
+	margin: 2% 2% 2% 4%;
+}
