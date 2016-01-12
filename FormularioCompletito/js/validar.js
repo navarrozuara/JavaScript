@@ -47,16 +47,19 @@ Procura aislar las validaciones del interfaz del usuario (arquitectura de tres c
 	}
 
 	function validarFecha(elemento) {
-		var fecha = new Date(elemento.substring(6,10), elemento.substring(3,5)-1, elemento.substring(0,2));
 		if (!(/^\d{2}\/\d{2}\/\d{4}$/.test(elemento)))
 			return false;
-		if (elemento.substring(0,2) != fecha.getDate())
-			return false;
-		return true;
+		var date = elemento.split("/");
+		var fecha = new Date(date[2], date[1]-1, date[0]);
+		if (fecha.getDate() == date[0])
+			if (fecha.getMonth() == date[1]-1)
+				if (fecha.getFullYear() == date[2])
+					return true;
+		return false;
 	}
 
 	function validarTelefono(elemento) {
-		if (!(/^\d{9}$/.test(elemento)) || !(/^\d{3}[-\s]?\d{3}[-\s]?\d{3}$/.test(elemento)))
+		if (!(/^\d{3}[-\s]?\d{3}[-\s]?\d{3}$/.test(elemento)))
 			return false;
 		return true;
 	}
@@ -101,184 +104,139 @@ Procura aislar las validaciones del interfaz del usuario (arquitectura de tres c
 
 	window.addEventListener('load', function() {
 
-		function validacionTexto() {
-			var texto = document.getElementById("texto");
-			if (!validarTexto(texto.value)) {
-				document.getElementById("textoErr").innerHTML = "Este campo es obligatorio.";
-				texto.focus();
-				texto.setAttribute('class','error');
-				return false;
+		var texto = document.getElementById("texto");
+		var numero = document.getElementById("numero");
+		var correo = document.getElementById("correo");
+		var dni = document.getElementById("dni");
+		var fecha = document.getElementById("fecha");
+		var telefono = document.getElementById("telefono");
+		var cuenta = document.getElementById("cuenta");
+		var url = document.getElementById("url");
+		var radioBtn = document.getElementsByName("sexo");
+		var lista = document.getElementById("opciones");
+		var check = document.getElementById("publicidad");
+
+		var textoErr = document.getElementById("textoErr");
+		var numErr = document.getElementById("numErr");
+		var correoErr = document.getElementById("correoErr");
+		var dniErr = document.getElementById("dniErr");
+		var fechaErr = document.getElementById("fechaErr");
+		var telefonoErr = document.getElementById("telefonoErr");
+		var cuentaErr = document.getElementById("cuentaErr");
+		var urlErr = document.getElementById("urlErr");
+		var radioErr = document.getElementById("radioErr");
+		var selectErr = document.getElementById("selectErr");
+		var checkErr = document.getElementById("checkErr");
+
+		var mensajesError = ["Este campo es obligatorio.", "Debe introducir un número.", "Dirección de correo inválida.", 
+		"El DNI introducido es inválido.", "La fecha introducida es inválida.", "Número de teléfono inválido.", 
+		"Número de cuenta corriente inválido.", "La URL introducida es inválida.", "Debe seleccionar una de las opciones.", 
+		"Debe aceptar el envío de publicidad para continuar."];
+
+		var element = "";
+
+		function validateElements(validate, elemento, elementoErr, msgError) {
+			if (!validate) {
+				elementoErr.innerHTML = msgError;
+				elemento.setAttribute('class','error');
+				element = elemento;
+				return true;
 			}
-			document.getElementById("textoErr").innerHTML = "";
-			texto.setAttribute('class','correct');
-			return true;
+			elementoErr.innerHTML = "";
+			elemento.setAttribute('class','correct');
+			return false;
 		}
 
-		function validacionNum() {
-			var numero = document.getElementById("numero");
-			if (!validarNum(numero.value)) {
-				document.getElementById("numErr").innerHTML = "Debe introducir un número.";
-				numero.focus();
-				numero.setAttribute('class','error');
-				return false;
-			}
-			document.getElementById("numErr").innerHTML = "";
-			numero.setAttribute('class','correct');
-			return true;
-		}
 
-		function validacionEmail() {
-			var correo = document.getElementById("correo");
-			if (!validarEmail(correo.value)) {
-				document.getElementById("correoErr").innerHTML = "Dirección de correo inválida.";
-				correo.focus();
-				correo.setAttribute('class','error');
-				return false;
-			}
-			document.getElementById("correoErr").innerHTML = "";
-			correo.setAttribute('class','correct');
-			return true;
-		}
-
-		function validacionDNI() {
-			var dni = document.getElementById("dni");
-			if (!validarDNI(dni.value)) {
-				document.getElementById("dniErr").innerHTML = "El DNI introducido es inválido.";
-				dni.focus();
-				dni.setAttribute('class','error');
-				return false;
-			}
-			document.getElementById("dniErr").innerHTML = "";
-			dni.setAttribute('class','correct');
-			return true;
-		}
-
-		function validacionFecha() {
-			var fecha = document.getElementById("fecha");
-			if (!validarFecha(fecha.value)) {
-				document.getElementById("fechaErr").innerHTML = "La fecha introducida es inválida.";
-				fecha.focus();
-				fecha.setAttribute('class','error');
-				return false;
-			}
-			document.getElementById("fechaErr").innerHTML = "";
-			fecha.setAttribute('class','correct');
-			return true;
-		}
-
-		function validacionTelefono() {
-			var telefono = document.getElementById("telefono");
-			if (!validarTelefono(telefono.value)) {
-				document.getElementById("telefonoErr").innerHTML = "Número de teléfono inválido.";
-				telefono.focus();
-				telefono.setAttribute('class','error');
-				return false;
-			}
-			document.getElementById("telefonoErr").innerHTML = "";
-			telefono.setAttribute('class','correct');
-			return true;
-		}
-
-		function validacionCuentaCorriente() {
-			var cuenta = document.getElementById("cuenta");
-			if (!validarCuentaCorriente(cuenta.value)) {
-				document.getElementById("cuentaErr").innerHTML = "Número de cuenta corriente inválido.";
-				cuenta.focus();
-				cuenta.setAttribute('class','error');
-				return false;
-			}
-			document.getElementById("cuentaErr").innerHTML = "";
-			cuenta.setAttribute('class','correct');
-			return true;
-		}
-
-		function validacionURL() {
-			var url = document.getElementById("url");
-			if (!validarURL(url.value)) {
-				document.getElementById("urlErr").innerHTML = "La URL introducida es inválida.";
-				url.focus();
-				url.setAttribute('class','error');
-				return false;
-			}
-			document.getElementById("urlErr").innerHTML = "";
-			url.setAttribute('class','correct');
-			return true;
-		}
-
-		function validacionRadio() {
-			var radio = document.getElementsByName("sexo");
-			if (!validarRadio(radio)) {
-				document.getElementById("sexoErr").innerHTML = "Debe seleccionar una de las opciones.";
-				radio[0].focus();
-				return false;
-			}
-			document.getElementById("sexoErr").innerHTML = "";
-			return true;
-		}
-
-		function validacionSelect() {
-			var select = document.getElementById("opciones");
-			if (!validarSelect(select)) {
-				document.getElementById("selectErr").innerHTML = "Debe seleccionar una de las opciones.";
-				select.focus();
-				return false;
-			}
-			document.getElementById("selectErr").innerHTML = "";
-			return true;
-		}
-
-		function validacionCheck() {
-			var check = document.getElementById("publicidad");
-			if (!validarCheck(check)) {
-				document.getElementById("publicidadErr").innerHTML = "Debe aceptar el envío de publicidad para continuar.";
-				check.focus();
-				return false;
-			}
-			document.getElementById("publicidadErr").innerHTML = "";
-			return true;
+		function obtenerFoco(elemento, checkElemento) {
+			if (checkElemento)
+				elemento.focus();
 		}
 
 		function validarFormulario() {
-			var validaciones = [];
-			validaciones.push(validacionTexto());
-			validaciones.push(validacionNum());
-			validaciones.push(validacionEmail());
-			validaciones.push(validacionDNI());
-			validaciones.push(validacionFecha());
-			validaciones.push(validacionTelefono());
-			validaciones.push(validacionCuentaCorriente());
-			validaciones.push(validacionURL());
-			validaciones.push(validacionRadio());
-			validaciones.push(validacionSelect());
-			validaciones.push(validacionCheck());
+			var errorTexto,
+				errorNumero,
+				errorCorreo,
+				errorDNI,
+				errorFecha,
+				errorTelefono,
+				errorCuenta,
+				errorURL,
+				errorRadio,
+				errorLista,
+				errorCheck;
 
-			var validado = true;
-
-			for (var i = 0; i < validaciones.length; i++) {
-				if (!validaciones[i]) {
-					validado = false;
+			errorCheck = validateElements(validarCheck(check), check, checkErr, mensajesError[9]);
+			errorLista = validateElements(validarSelect(lista), lista, selectErr, mensajesError[8]);
+			for (var i = 0; i < radioBtn.length; i++) {
+				errorRadio = validateElements(validarRadio(radioBtn), radioBtn[i], radioErr, mensajesError[8]);
+				if (errorRadio)
 					break;
-				}
 			}
+			errorURL = validateElements(validarURL(url.value), url, urlErr, mensajesError[7]);
+			errorCuenta = validateElements(validarCuentaCorriente(cuenta.value), cuenta, cuentaErr, mensajesError[6]);
+			errorTelefono = validateElements(validarTelefono(telefono.value), telefono, telefonoErr, mensajesError[5]);
+			errorFecha = validateElements(validarFecha(fecha.value), fecha, fechaErr, mensajesError[4]);
+			errorDNI = validateElements(validarDNI(dni.value), dni, dniErr, mensajesError[3]);
+			errorCorreo = validateElements(validarEmail(correo.value), correo, correoErr, mensajesError[2]);
+			errorNumero = validateElements(validarNum(numero.value), numero, numErr, mensajesError[1]);
+			errorTexto = validateElements(validarTexto(texto.value), texto, textoErr, mensajesError[0]);
 
-			if (!validado)
+			if (errorTexto || errorNumero || errorCorreo || errorDNI || errorFecha  || errorTelefono || errorCuenta 
+				|| errorURL || errorRadio || errorLista || errorCheck) {
+				element.focus();
 				return false;
-			return true;
+			}
 		}
 
-		document.getElementById("texto").addEventListener('blur', validacionTexto, false);
-		document.getElementById("numero").addEventListener('blur', validacionNum, false);
-		document.getElementById("correo").addEventListener('blur', validacionEmail, false);
-		document.getElementById("dni").addEventListener('blur', validacionDNI, false);
-		document.getElementById("fecha").addEventListener('blur', validacionFecha, false);
-		document.getElementById("telefono").addEventListener('blur', validacionTelefono, false);
-		document.getElementById("cuenta").addEventListener('blur', validacionCuentaCorriente, false);
-		document.getElementById("url").addEventListener('blur', validacionURL, false);
-		for (var i = 0; i < document.getElementsByName("sexo").length; i++)
-			document.getElementsByName("sexo")[i].addEventListener('blur', validacionRadio, false);
-		document.getElementById("opciones").addEventListener('blur', validacionSelect, false);
-		document.getElementById("publicidad").addEventListener('blur', validacionCheck, false);
+		texto.addEventListener('blur', function() {
+			obtenerFoco(this, validateElements(validarTexto(this.value), this, textoErr, mensajesError[0]));
+		});
+
+		numero.addEventListener('blur', function() {
+			obtenerFoco(this, validateElements(validarNum(this.value), this, numErr, mensajesError[1]));
+		});
+
+		correo.addEventListener('blur', function() {
+			obtenerFoco(this, validateElements(validarEmail(this.value), this, correoErr, mensajesError[2]));
+		});
+
+		dni.addEventListener('blur', function() {
+			obtenerFoco(this, validateElements(validarDNI(this.value), this, dniErr, mensajesError[3]));
+		});
+
+		fecha.addEventListener('blur', function() {
+			obtenerFoco(this, validateElements(validarFecha(this.value), this, fechaErr, mensajesError[4]));
+		});
+
+		telefono.addEventListener('blur', function() {
+			obtenerFoco(this, validateElements(validarTelefono(this.value), this, telefonoErr, mensajesError[5]));
+		});
+
+		cuenta.addEventListener('blur', function() {
+			obtenerFoco(this, validateElements(validarCuentaCorriente(this.value), this, cuentaErr, mensajesError[6]));
+		});
+
+		url.addEventListener('blur', function() {
+			obtenerFoco(this, validateElements(validarURL(this.value), this, urlErr, mensajesError[7]));
+		});
+
+		for (var i = 0; i < radioBtn.length; i++) {
+			radioBtn[i].addEventListener('blur', function() {
+				obtenerFoco(this, validateElements(validarRadio(radioBtn), this, radioErr, mensajesError[8]));
+			});
+		}
+
+		lista.addEventListener('blur', function() {
+			obtenerFoco(this, validateElements(validarSelect(this), this, selectErr, mensajesError[8]));
+		});
+
+		check.addEventListener('blur', function() {
+			obtenerFoco(this, validateElements(validarCheck(this), this, checkErr, mensajesError[9]));
+		});
+
 		document.forms[0].onsubmit = validarFormulario;
+
 	});
 
 })();

@@ -12,15 +12,15 @@
 		<p>La página que estás visualizando requiere para su correcto funcionamiento el uso de JavaScript. Si lo has deshabilitado, por favor activalo.</p>
 	</noscript>
 	<h1>Validación de formularios</h1>
-	<form action="validado.html" method="POST">
+	<form action="validado.html" method="post">
 		<p>
 			<label>Campo de texto</label>
-			<input type="text" id="texto" placeholder="Apellidos y Nombre" autofocus />
+			<input type="text" id="texto" placeholder="Introduce texto" />
 			<span id="textoErr"></span>
 		</p>
 		<p>
 			<label>Número</label>
-			<input type="number" id="numero" placeholder="22" />
+			<input type="number" id="numero" placeholder="Ejemplo: 22" />
 			<span id="numErr"></span>	
 		</p>
 		<p>
@@ -50,14 +50,14 @@
 		</p>
 		<p>
 			<label>URL</label>
-			<input type="url" id="url" placeholder="www.google.es" />
+			<input type="url" id="url" placeholder="http://www.google.es" />
 			<span id="urlErr"></span>	
 		</p>
 		<p>
 			<label>Sexo</label>
 			<input type="radio" name="sexo" value="Hombre" /> Hombre
 			<input type="radio" name="sexo" value="Mujer" /> Mujer
-			<br /><span id="sexoErr"></span>
+			<br /><span id="radioErr"></span>
 		</p>
 		<p>
 			<label>Selección</label>
@@ -70,8 +70,8 @@
 			<br /><span id="selectErr"></span>
 		</p>
 		<p>
-			<input type="checkbox" id="publicidad" /> Enviar publicidad.
-			<span id="publicidadErr"></span>
+			<input type="checkbox" id="publicidad"> Enviar publicidad.
+			<span id="checkErr"></span>
 		</p>
 		<input type="submit" id="enviar" value="Enviar" />
 		<input type="reset" id="limpiar" value="Limpiar" />
