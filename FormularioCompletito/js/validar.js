@@ -154,36 +154,31 @@ Procura aislar las validaciones del interfaz del usuario (arquitectura de tres c
 		}
 
 		function validarFormulario() {
-			var errorTexto,
-				errorNumero,
-				errorCorreo,
-				errorDNI,
-				errorFecha,
-				errorTelefono,
-				errorCuenta,
-				errorURL,
-				errorRadio,
-				errorLista,
-				errorCheck;
-
-			errorCheck = validateElements(validarCheck(check), check, checkErr, mensajesError[9]);
-			errorLista = validateElements(validarSelect(lista), lista, selectErr, mensajesError[8]);
+			var arrayError = [];
+			arrayError.push(validateElements(validarCheck(check), check, checkErr, mensajesError[9]));
+			arrayError.push(validateElements(validarSelect(lista), lista, selectErr, mensajesError[8]));
 			for (var i = 0; i < radioBtn.length; i++) {
-				errorRadio = validateElements(validarRadio(radioBtn), radioBtn[i], radioErr, mensajesError[8]);
-				if (errorRadio)
-					break;
+				arrayError.push(validateElements(validarRadio(radioBtn), radioBtn[i], radioErr, mensajesError[8]));
 			}
-			errorURL = validateElements(validarURL(url.value), url, urlErr, mensajesError[7]);
-			errorCuenta = validateElements(validarCuentaCorriente(cuenta.value), cuenta, cuentaErr, mensajesError[6]);
-			errorTelefono = validateElements(validarTelefono(telefono.value), telefono, telefonoErr, mensajesError[5]);
-			errorFecha = validateElements(validarFecha(fecha.value), fecha, fechaErr, mensajesError[4]);
-			errorDNI = validateElements(validarDNI(dni.value), dni, dniErr, mensajesError[3]);
-			errorCorreo = validateElements(validarEmail(correo.value), correo, correoErr, mensajesError[2]);
-			errorNumero = validateElements(validarNum(numero.value), numero, numErr, mensajesError[1]);
-			errorTexto = validateElements(validarTexto(texto.value), texto, textoErr, mensajesError[0]);
+			arrayError.push(validateElements(validarURL(url.value), url, urlErr, mensajesError[7]));
+			arrayError.push(validateElements(validarCuentaCorriente(cuenta.value), cuenta, cuentaErr, mensajesError[6]));
+			arrayError.push(validateElements(validarTelefono(telefono.value), telefono, telefonoErr, mensajesError[5]));
+			arrayError.push(validateElements(validarFecha(fecha.value), fecha, fechaErr, mensajesError[4]));
+			arrayError.push(validateElements(validarDNI(dni.value), dni, dniErr, mensajesError[3]));
+			arrayError.push(validateElements(validarEmail(correo.value), correo, correoErr, mensajesError[2]));
+			arrayError.push(validateElements(validarNum(numero.value), numero, numErr, mensajesError[1]));
+			arrayError.push(validateElements(validarTexto(texto.value), texto, textoErr, mensajesError[0]));
 
-			if (errorTexto || errorNumero || errorCorreo || errorDNI || errorFecha  || errorTelefono || errorCuenta 
-				|| errorURL || errorRadio || errorLista || errorCheck) {
+			var error = false;
+
+			for (var i = 0; i < arrayError.length; i++) {
+				if (arrayError[i]) {
+					error = true;
+					break;
+				}
+			}
+
+			if (error) {
 				element.focus();
 				return false;
 			}
@@ -236,7 +231,6 @@ Procura aislar las validaciones del interfaz del usuario (arquitectura de tres c
 		});
 
 		document.forms[0].onsubmit = validarFormulario;
-
 	});
 
 })();
