@@ -181,7 +181,8 @@ Procura aislar las validaciones del interfaz del usuario (arquitectura de tres c
 			if (error) {
 				element.focus();
 				return false;
-			}
+			} else 
+				return true;
 		}
 
 		texto.addEventListener('blur', function() {
