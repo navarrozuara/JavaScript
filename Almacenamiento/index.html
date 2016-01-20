@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Elisa Navarro Zuara | Almacenamiento</title>
+	<meta name="author" content="Elisa Navarro Zuara">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/cookies.js"></script>
+	<script type="text/javascript" src="js/storage.js"></script>
+</head>
+<body>
+	<noscript>
+		<p>La página que estás visualizando requiere para su correcto funcionamiento el uso de JavaScript. Si lo has deshabilitado, por favor activalo.</p>
+	</noscript>
+	<section class="container">
+		<article>
+			<h2>Cookie</h2>
+			<h3>¿Qué son las cookies?</h3>
+			<p class="text-justify">Una <i>cookie</i> es un pequeño fichero de texto que se crea y almacena en el navegador cuando un usuario visita una página. Su principal utilidad es que la web sea capaz de recordar a un visitante cuando vuelva a navegar por la página en cuestión, ya que cuando se cierra una conexión, el servidor no recuerda nada sobre el usuario. Surgieron para solucionar el problema de almacenar información sobre el usuario.</p>
+			<h3>document.cookie</h3>
+			<p>En JavaScript se pueden crear, leer y eliminar cookies a través de la propiedad <strong>document.cookie</strong>.</p>
+			<p>document.cookie = "username=Elisa; expires=Thu, 18 Dec 2016 12:00:00 UTC";</p>
+			<p>var c = document.cookie;</p>
+			<p>Para eliminar la cookie, bastaría con volver a definirla con una fecha de expiración negativa.</p>
+			<p>document.cookie = "username=Elisa; expires=-1";</p>
+			<p>Para cambiar el valor de una cookie, bastaría con reasignarle un nuevo valor.</p>
+			<h3>Ejemplo</h3>
+			<p>
+				<input type="button" class="btn btn-success" id="crear" value="Crear cookie">
+				<input type="button" class="btn btn-success" id="eliminar" value="Eliminar cookie">
+			</p>
+			<div id="resultado"></div>
+		</article>
+		<article>
+			<h2>LocalStorage y SessionStorage</h2>
+			<h3>¿Qué és?</h3>
+			<p class="text-justify">La propiedad <i>localStorage</i> permite acceder al objeto local Storage y la propiedad <i>sessionStorage</i> permite acceder a un objeto Storage asociado a la sesión actual. La propiedad localStorage es similar a la propiedad sessionStorage. La única diferencia es que, mientras los datos almacenados en localStorage no tienen fecha de expiración, los datos almacenados en sessionStorage son eliminados cuando la sesión de navegación finaliza.</p>
+			<h3>Métodos</h3>
+			<ul>
+				<li>setItem(keyName, keyValue)</li>
+				<li>removeItem(keyName)</li>
+				<li>getItem(keyName)</li>
+			</ul>
+			<h3>Ejemplo</h3>
+			<p>
+				<input type="button" class="btn btn-success" id="crearLocal" value="Crear localStorage">
+				<input type="button" class="btn btn-success" id="eliminarLocal" value="Eliminar localStorage">
+			</p>
+			<div id="resultadoLocal"></div>
+		</article>
+		<article>
+			<h2>Pros y contras</h2>
+			<h3>Cookies</h3>
+			<ul>
+				<li>Las cookies utilizan cadenas para almacenar la información, por lo tanto la recuperación de información a partir de ellas es más complicado.</li>
+				<li>Las cookies tienen fecha de expiración.</li>
+				<li>Cada vez que se realiza una petición al servidor, toda la información que está almacenada en las cookies es enviada y recibida nuevamente con la respuesta del servidor.</li>
+				<li>Una cookie sólo ocupa 4kb de espacio.</li>
+			</ul>
+			<h3>LocalStorage y SessionStorage</h3>
+			<ul>
+				<li>La propiedad localStorage no tiene fecha de expiración y la propiedad sessionStorage elimina los datos almacenados cuando se cierra el navegador.</li>
+				<li>Ambas propiedades trabajan con el objeto Storage, más fácil y simple que trabajar con cadenas.</li>
+				<li>La información almacenada no es enviada al servidor en cada petición.</li>
+				<li>Ambas propiedades pueden ocupar hasta 5MB de espacio.</li>
+			</ul>
+		</article>
+	</section>
+</body>
+</html>
