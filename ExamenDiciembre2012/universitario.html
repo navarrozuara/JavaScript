@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Elisa Navarro Zuara</title>
+	<script type="text/javascript" src="js/universitario.js"></script>
+	<style type="text/css">
+		label {
+			display: inline-block;
+			width: 260px;
+		}
+		.error {
+			color: #FF0000;
+		}
+	</style>
+</head>
+<body>
+	<noscript>
+		<p>La página que estás visualizando requiere para su correcto funcionamiento el uso de JavaScript. Si lo has deshabilitado, por favor activalo.</p>
+	</noscript>
+	Alta del universitario
+	<form>
+		<fieldset>
+		<p>
+			<label>Nombre</label>
+			<input type="text" id="nombre" placeholder="Nombre">
+		</p>
+		<p>
+			<label>Primer Apellido</label>
+			<input type="text" id="apellido1" placeholder="Apellido primero">
+		</p>
+		<p>
+			<label>Segundo Apellido</label>
+			<input type="text" id="apellido2" placeholder="Apellido segundo">
+		</p>
+		<p>
+			<label>Fecha de nacimiento</label>
+			<input type="text" id="fechaNacimiento" placeholder="dd-mm-aaaa">
+		</p>
+		</fieldset>
+		<input type="checkbox" id="aceptar">Acepto las condiciones
+		<p>
+			<input type="button" id="crear" value="Crear">
+			<input type="reset" id="limpiar" value="Limpiar">
+		</p>
+	</form>
+	<br />
+	<div id="msgErr" class="error"></div>
+</body>
+</html>
