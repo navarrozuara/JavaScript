@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplos de jQuery</title>
+	<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="js/ejemplo1.js"></script>
+</head>
+<body>
+	<p>Distintas formas de acceder al atributo checked. Compruébalo en las distintas plataformas, tanto con input como con radio buttons.</p>
+	<ol>
+		<li>:selected Selector</li>
+		<li>.prop()</li>
+		<li>.attr()</li>
+		<li>:checked Selector</li>
+		<li>.val()</li>
+	</ol>
+	<h2>:selected</h2>
+	<p>Selecciona todos los elementos que están seleccionados.</p>
+	<select id="selector">
+		<option>León</option>
+		<option>Elefante</option>
+		<option>Jirafa</option>
+		<option>Leopardo</option>
+		<option>Serpiente</option>
+		<option>Delfín</option>
+	</select>
+	<p id="msgSelect"></p>
+	<h2>.prop()</h2>
+	<p>Obtiene el valor de una propiedad para el primer elemento en el conjunto de elementos coincidentes o establece una o más propiedades para cada elemento coincidente.</p>
+	<input type="checkbox" id="check1">Check me
+	<p id="msgCheck"></p>
+	<h2>.attr()</h2>
+	<p>Obtiene el valor de un atributo para el primer elemento en el conjunto de elementos coincidentes o establece uno o más atributos para cada elemento coincidente.</p>
+	<input type="checkbox" id="check" value="check1" checked disabled>Check1
+	<input type="checkbox" id="check" value="check2" disabled>Check2
+	<input type="checkbox" id="check" value="check3" checked disabled>Check3
+	<p id="msgCheck2"></p>
+	<h2>:checked Selector</h2>
+	<p>Coincide con todos los elementos que estén seleccionados.</p>
+	<p>
+	 	<input type="radio" name="fruit" class="fruit" value="orange" id="orange">
+	 	<label for="orange">orange</label>
+	</p>
+	<p>
+		<input type="radio" name="fruit" class="fruit" value="apple" id="apple">
+		<label for="apple">apple</label>
+	</p>
+	<p>
+		<input type="radio" name="fruit" class="fruit" value="banana" id="banana">
+		<label for="banana">banana</label>
+	</p>
+	<p id="msgRadio"></p>
+	<h2>.val()</h2>
+	<p>Obtiene el valor actual del primer elemento en el conjunto de elementos coincidentes.</p>
+	<input type="radio" name="sexo" class="radio" value="mujer" checked disabled>Mujer
+	<input type="radio" name="sexo" class="radio" value="hombre" disabled>Hombre
+	<p id="msgRadio2"></p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplos de jQuery</title>
+	<style type="text/css">
+		ul li {
+            margin-bottom: 15px;
+            margin-right: 15px;
+            text-align: justify;
+        }
+	</style>
+<body>
+	<p>Diferencia entre .on(), .live(). bind() y .delegate()</p>
+	<ul>
+		<li>
+			<strong>on()</strong>
+			Permite añadir uno o varios eventos a los elementos recogidos por un selector jQuery. También permite la delegación de eventos, por lo que se recomienda su uso.
+		</li>
+		<li>
+			<strong>live()</strong>
+			Este método está obsoleto. Permite añadir un evento a todos los elementos que coincidan con el selector, ahora y en el futuro.
+		</li>
+		<li>
+			<strong>bind()</strong>
+			Su uso está desaconsejado en favor del método on(). Permite añadir uno o varios eventos a los elementos que coincidan con el selector.
+		</li>
+		<li>
+			<strong>delegate()</strong>
+			Su uso está desaconsejado en favor del método on(). Permite añadir uno o varios eventos a todos los elementos que coincidan con el selector, ahora y en el futuro, basado en un conjunto específico de elementos raíz.
+		</li>
+	</ul>
+</body>
+</html>

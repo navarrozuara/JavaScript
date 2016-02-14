@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 8.6</title>
+	<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+	<style type="text/css">
+		body {
+			font-size: 0.75em;
+			font-family: tahoma, verdana, sans-serif;
+		}
+		#micapa {
+			margin-top: 20px;
+			width: 400px;
+			background-color: #F80;
+			padding: 18px;
+			text-align: center;
+			font-size: 1.5em;
+			top: 100px;
+			left: 300px;
+			position: absolute;
+		}
+		button.botondetener {
+			display: none;
+		}
+	</style>
+	<script type="text/javascript" src="js/ejercicio8.6.js"></script>
+</head>
+<body>
+	<noscript>
+		<p>La página que estás visualizando requiere para su correcto funcionamiento el uso de JavaScript. Si lo has deshabilitado, por favor activalo.</p>
+	</noscript>
+	<button id="botoncomenzar">Comenzar animación</button>
+	<br />
+	<button id="botonparar" class="botondetener">Pasar a la siguiente etapa de la animación</button>
+	<br />
+	<button id="botonpararllegar" class="botondetener">Pasar a la siguiente etapa, pero llegar hasta el final de donde se planeaba la animación</button>
+	<br />
+	<button id="botonparartodo" class="botondetener">Parar todo!</button>
+	<div id="micapa">Hola a todos!!!</div>
+</body>
+</html>
