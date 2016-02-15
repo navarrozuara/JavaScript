@@ -7,7 +7,7 @@ function muestraRestantesCola() {
 }
 
 function cambiarColores() {
-	capa = $("#micapa");
+	var capa = $("#micapa");
 	capa.delay(1000, "micola");
 	capa.queue("micola", function(sig) {
 		$(this).css({
@@ -33,7 +33,7 @@ function cambiarColores() {
 }
 
 function ocultaMuestra() {
-	capa = $("#micapa");
+	var capa = $("#micapa");
 	capa.fadeTo(500, 0.3);
 	capa.fadeTo(1200, 1);
 	capa.animate({
