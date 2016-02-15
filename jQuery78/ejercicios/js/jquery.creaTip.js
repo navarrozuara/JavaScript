@@ -8,7 +8,7 @@ jQuery.fn.creaTip = function(textoTip, opciones) {
 	jQuery.extend(configuracion, opciones);
 	
 	this.each(function() {
-		elem = $(this);
+		var elem = $(this);
 		var miTip = $('<div class="' + configuracion.claseTip + '">' + textoTip + '</div>');
 		$(document.body).append(miTip);
 		elem.data("capatip", miTip);
