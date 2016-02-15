@@ -1,6 +1,6 @@
 jQuery.fn.parpadea = function() {
 	this.each(function() {
-		elem = $(this);
+		var elem = $(this);
 		elem.fadeOut(250, function() {
 			$(this).fadeIn(250);
 		});
