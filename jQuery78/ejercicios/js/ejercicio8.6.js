@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$("#botoncomenzar").click(function() {
-		capa = $("#micapa");
+		var capa = $("#micapa");
 		capa.queue(function(continua) {
 			$("button.botondetener").show(500);
 			continua();

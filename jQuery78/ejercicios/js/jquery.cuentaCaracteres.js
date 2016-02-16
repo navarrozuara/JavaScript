@@ -1,6 +1,6 @@
 jQuery.fn.cuentaCaracteres = function() {
 	this.each(function() {
-		elem = $(this);
+		var elem = $(this);
 		var contador = $('<div>Contador caracteres: ' + elem.prop("value").length + '</div>');
 		elem.after(contador);
 		elem.data("campocontador", contador);

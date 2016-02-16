@@ -1,9 +1,9 @@
 jQuery.fn.miPlugin = function() {
-	mivariableComun = "comun";
+	var mivariableComun = "comun";
 	alert("Nueva invocación de plugin. Mi variable común: " + mivariableComun);
 
 	this.each(function() {
-		elem = $(this);		
+		var elem = $(this);		
 		var miVariable = "x";
 
 		function miFuncion() {

@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$("#botoncomenzar").click(function() {
-		capa = $("#micapa");
+		var capa = $("#micapa");
 		capa.animate({"width": "80px"}, 1000);
 		capa.queue(function() {
 			$(this).css({
