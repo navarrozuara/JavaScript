@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Elisa Navarro Zuara</title>
+	<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+	<noscript>
+		<p>La página que estás visualizando requiere para su correcto funcionamiento el uso de JavaScript. Si lo has deshabilitado, por favor activalo.</p>
+	</noscript>
+	<header>
+		<h1>Elisa Navarro Zuara</h1>
+	</header>
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">Datepicker</a></li>
+			<li><a href="#tabs-2">Dialog</a></li>
+			<li><a href="#tabs-3">Tooltip</a></li>
+		</ul>
+		<div id="tabs-1">
+			<p>Fecha: <input type="text" id="datepicker" size="20"></p>
+			<p><a href="http://jqueryui.com/datepicker/" target="_blank">Enlace a la página del sitio oficial.</a></p>
+			<p>El datepicker está vinculado a un campo de entrada de formulario estándar. Se centra en la entrada (clic, o utilice la tecla tab) para abrir un calendario interactivo en una pequeña superposición. Para cerrar el calendario elija una fecha, haga clic en otra parte de la página (desenfoque la entrada) o pulse la tecla Esc. Si se elige una fecha, se muestra como valor de entrada.</p>
+			<p>Código jQuery</p>
+			<pre>
+$("#datepicker").datepicker({
+    dateFormat: "dd-mm-yy",
+    minDate: new Date(),
+    dayNames: [ "Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado" ],
+    dayNamesMin: [ "Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab" ],
+    monthNames: [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ],
+    monthNamesShort: [ "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" ],
+    showAnim: "drop"
+});
+			</pre>
+		</div>
+		<div id="tabs-2">
+			<div id="dialog">
+				<p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+			</div>
+			<button id="opener" class="ui-state-default ui-corner-all">Abrir diálogo</button>
+			<p><a href="http://jqueryui.com/dialog/" target="_blank">Enlace a la página del sitio oficial.</a></p>
+			<p>La ventana de diálogo básico es una superposición que se coloca dentro de la vista y está protegido del contenido de la página (como elementos escogidos) que brilla a través de un iframe. Tiene una barra de título y un área de contenido, y se puede mover, cambiar de tamaño y se cierra con el icono 'x' por defecto.</p>
+			<p>Código jQuery</p>
+			<pre>
+$("#dialog").dialog({
+    autoOpen: false,
+    show: {
+        effect: "blind",
+        duration: 1000
+    },
+    hide: {
+        effect: "explode",
+        duration: 1000
+    },
+    title: "Diálogo básico",
+    width: 400,
+    buttons: [
+        {
+            text: "Ok",
+            click: function() {
+                $(this).dialog("close");
+            }
+        },
+        {
+            text: "Cancel",
+            click: function() {
+                $(this).dialog("close");
+            }
+        }
+    ]
+});
+$("#opener").on('click', function() {
+    $("#dialog").dialog("open");
+});
+			</pre>
+		</div>
+		<div id="tabs-3">
+			<p><label for="usuario">Usuario:</label> <input id="usuario" title="Introduce un usuario con un mínimo de 6 caracteres."></p>
+			<p><a href="http://jqueryui.com/tooltip/" target="_blank">Enlace a la página del sitio oficial.</a></p>
+			<p>El tooltip puede acoplarse a cualquier elemento. Al pasar por encima del elemento con el cursor del ratón, se muestra el atributo title en una pequeña caja al lado del elemento, al igual que un texto de ayuda nativa.</p>
+			<p>Código jQuery</p>
+			<pre>
+$("#usuario").tooltip({
+    show: { 
+        effect: "blind", 
+        duration: 1000 
+    }
+});
+			</pre>
+		</div>
+	</div>
+</body>
+</html>
