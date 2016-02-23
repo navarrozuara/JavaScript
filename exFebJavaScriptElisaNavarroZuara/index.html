@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Elisa Navarro Zuara</title>
+	<script type="text/javascript" src="js/script.js"></script>
+	<style type="text/css">
+		label {
+			display: inline-block;
+			width: 100px;
+		}
+		.error {
+			color: #FF0000;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<p>
+			<label>Nombre</label>
+			<input type="text" id="nombre" placeholder="Nombre"> <span id="msgNombre" class="error"></span>
+		</p>
+		<p>
+			<label>Apellidos</label>
+			<input type="text" id="apellidos" placeholder="Apellidos"> <span id="msgApellidos" class="error"></span>
+		</p>
+		<p>
+			<label>DNI</label>
+			<input type="text" id="dni" placeholder="12345678X"> <span id="msgDni" class="error"></span>
+		</p>
+		<p>
+			<label>Sexo</label>
+			<input type="radio" name="sexo" value="Hombre">Hombre
+			<input type="radio" name="sexo" value="Mujer">Mujer
+			<span id="msgSexo" class="error"></span>
+		</p>
+		<input type="checkbox" id="acepto">Acepto las condiciones <span id="msgCheck" class="error"></span>
+		<p>
+			<input type="button" id="crear" value="Nuevo usuario">
+			<input type="reset" id="limpiar" value="Limpiar">
+		</p>
+	</form>
+	<div id="mensaje"></div>
+	<ul id="lista"></ul>
+</body>
+</html>
