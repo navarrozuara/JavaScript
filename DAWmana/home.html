@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DAWmana | Inicio</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/pgwslideshow.min.css">
+	<link rel="stylesheet" type="text/css" href="css/pgwslideshow_light.min.css">
+	<link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+	<!-- Scripts -->
+	<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/pgwslideshow.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/messages_es.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+</head>
+<body>
+	<noscript>
+		<p>La página que estás visualizando requiere para su correcto funcionamiento el uso de JavaScript. Si lo has deshabilitado, por favor activalo.</p>
+	</noscript>
+	<div id="cookies" class="ui-state-error">
+		<p>Necesita tener activas las cookies para navegar correctamente por la web. <button type="button" id="aceptar">Aceptar</button></p>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="#actividades" class="actividades">Actividades</a></li>
+			<li><a href="#ponentes" class="ponentes">Ponentes</a></li>
+			<li><a href="#concursos" class="concursos">Concursos</a></li>
+			<li><a href="#eventos" class="eventos">Eventos</a></li>
+		</ul>
+		<div id="panel-login">
+			<a href="#" class="login">Login</a>
+			<a href="#" class="registro">Registro</a>
+		</div>
+	</nav>
+	<header id="cabezera">
+		<h1>DAWmana 2016</h1>
+		<h2>Semana del Desarrollo Web: del 25 al 29 de Enero</h2>
+	</header>
+	<div id="dialog-login" class="ui-widget">
+		<form id="form-login" method="post">
+			<p><label for="usuario"></label> <input type="text" name="usuario" id="usuario" placeholder="Usuario" required></p>
+			<p><label for="password"></label> <input type="password" name="password" id="password" placeholder="Password" required></p>
+		</form>
+	</div>
+	<div id="dialog-registro" class="ui-widget">
+		<form id="form-registro" method="post">
+			<p><label for="nombre">Nombre:</label> <input type="text" name="nombre" id="nombre" placeholder="Nombre" required></p>
+			<p><label for="apellidos">Apellidos:</label> <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required></p>
+			<p><label for="dni">DNI: </label> <input type="text" name="dni" id="dni" placeholder="11111111X" required></p>
+			<p><label for="email">Correo electrónico:</label> <input type="email" name="email" id="email" placeholder="ejemplo@gmail.com" required></p>
+			<p><label for="procedencia">Procedencia:</label> <input type="text" name="procedencia" id="procedencia" placeholder="IES, Universidad..." required></p>
+		</form>
+	</div>
+	<div id="dialog-message" class="ui-widget">
+		<p>Se ha registrado con éxito en la DAWmana 2016.</p>
+	</div>
+	<main id="contenido">
+		<section id="actividades">
+			<article>
+				<header>
+					<h2>Listado de actividades</h2>
+				</header>
+				<h3>Lunes 25 de Enero</h3>
+				<div id="act1">
+					<h4 title="Los alumnos de 2ºASIR realizarán una charla/taller sobre la herrarmienta Hiren's Boot">Hiren's Boot una Herrarmienta para dominarlas todas</h4>
+					<div>
+						<table>
+							<tr>
+								<td>9:15 - 11:15</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Hiren's Boot una Herrarmienta para dominarlas todas.</td>
+								<td>Alumnos de 2º ASIR</td>
+								<td>I.E.S Gran Capitán</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="act2">
+					<h4 title="Charla/Taller de introducción a Ionic + AngularJS">Charla-Taller de Ionic + AngularJS</h4>
+					<div>
+						<table>
+							<tr>
+								<td>12:40 - 14:40</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Charla-Taller de Ionic + AngularJS.</td>
+								<td>Rafael Terán</td>
+								<td>Salmorejo Software</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<h3>Martes 26 de Enero</h3>
+				<div id="act3">
+					<h4 title="Charla sobre el desarrollo seguro de aplicaciones C/C++ en Android con NDK">Desarrollo seguro de aplicaciones C/C++ en Android con NDK</h4>
+					<div>
+						<table>
+							<tr>
+								<td>8:15 - 9:15</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Desarrollo seguro de aplicaciones C/C++ en Android con NDK.</td>
+								<td>José Ignacio Álvarez Ruiz</td>
+								<td>Redsys</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="act4">
+					<h4 title="Charla en la que el ponente hablará sobre consultoría en Sopinet Software">Un día de consultoría en Sopinet Software, de lo técnico a lo espiritual</h4>
+					<div>
+						<table>
+							<tr>
+								<td>9:15 - 10:15</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Un día de consultoría en Sopinet Software, de lo técnico a lo espiritual.</td>
+								<td>Fernando Hidalgo</td>
+								<td>Sopinet</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="act5">
+					<h4 title="Charla sobre orientación profesional y las tecnologías del futuro (Hologramas, Google Glass...)">Breaking Back': el emprendedor tecnológico</h4>
+					<div>
+						<table>
+							<tr>
+								<td>10:15 - 11:15</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Breaking Back': el emprendedor tecnológico.</td>
+								<td>Juan Jose Rider Jimenez</td>
+								<td>WUL4</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="act6">
+					<h4 title="Charla sobre cómo hackear una web">Hackeando una Web como un profesional</h4>
+					<div>
+						<table>
+							<tr>
+								<td>11:40 - 13:40</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Hackeando una Web como un profesional.</td>
+								<td>Miguel Ángel Arroyo Moreno</td>
+								<td>SVTCloud</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="act7">
+					<h4 title="Charla en la que el ponente hablará sobre el futuro del trabajo">El futuro del trabajo</h4>
+					<div>
+						<table>
+							<tr>
+								<td>13:40 - 14:40</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>El futuro del trabajo.</td>
+								<td>Miguel Ángel Calero Fernández</td>
+								<td>coSfera</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<h3>Miércoles 27 de Enero</h3>
+				<div id="act8">
+					<h4 title="Charla sobre sanidad, sistemas y cintas de vídeo">Sanidad, Sistemas y cintas de vídeo</h4>
+					<div>
+						<table>
+							<tr>
+								<td>10:15 - 11:15</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Sanidad, Sistemas y cintas de vídeo.</td>
+								<td>Raúl Valentín</td>
+								<td>Hospital San Juan de Dios</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="act9">
+					<h4 title="Charla introductoria a las distintas técnicas de márketing digital">Introducción al marketing digital</h4>
+					<div>
+						<table>
+							<tr>
+								<td>11:40 - 12:40</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Introducción al marketing digital.</td>
+								<td>Miguel Ángel López Torralba</td>
+								<td>I.E.S Gran Capitán</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="act10">
+					<h4 title="Resolución y entrega de premios del II Concurso de Posicionamiento SEO">II Concurso Posicionamiento SEO</h4>
+					<div>
+						<table>
+							<tr>
+								<td>12:40 - 12:55</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>II Concurso Posicionamiento SEO.</td>
+								<td>I.E.S Gran Capitán</td>
+								<td>I.E.S Gran Capitán</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="act11">
+					<h4 title="Charla en la que el ponente explicará cómo se organiza en el trabajo como desarrollador y como tratar con los clientes">Organízate en el trabajo y con los clientes</h4>
+					<div>
+						<table>
+							<tr>
+								<td>12:55 - 14:05</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Organízate en el trabajo y con los clientes.</td>
+								<td>Miguel Ángel López Torralba</td>
+								<td>I.E.S Gran Capitán</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<h3>Jueves 28 de Enero</h3>
+				<div id="act12">
+					<h4 title="Charla/Taller de iniciación a three.js">Taller iniciación a three.js</h4>
+					<div>
+						<table>
+							<tr>
+								<td>8:15 - 11:15</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Taller iniciación a three.js.</td>
+								<td>Álvaro Serrano García</td>
+								<td>WUL4</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="act13">
+					<h4 title="Charla sobre diseño, prototipos y desarrollo">Diseña, prototipa y desarrolla (sin morir en el intento)</h4>
+					<div>
+						<table>
+							<tr>
+								<td>11:40 - 12:40</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Diseña, prototipa y desarrolla (sin morir en el intento).</td>
+								<td>Claudia López Iglesias y Álvaro Serrano García</td>
+								<td>WUL4</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="act14">
+					<h4 title="Los alumnos de 2ºDAW darán una charla sobre el desarrollo web seguro">Desarrollo Web Seguro</h4>
+					<div>
+						<table>
+							<tr>
+								<td>12:40 - 13:40</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Desarrollo Web Seguro.</td>
+								<td>Juan Antonio Cubero y Pedro J. Ramos</td>
+								<td>I.E.S Gran Capitán</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<h3>Viernes 29 de Enero</h3>
+				<div id="act15">
+					<h4 title="Charla introductoria a la robótica">Arduino, introducción a la Robótica</h4>
+					<div>
+						<table>
+							<tr>
+								<td>8:15 - 9:45</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Arduino, introducción a la Robótica.</td>
+								<td>Ezequiel Torres Sánchez</td>
+								<td>I.E.S Gran Capitán</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="act16">
+					<h4 title="Charla en la que el ponente hablará sobre su experiencia personal en el montaje de una impresora 3D casera">Experiencias de montaje de una Impresora 3D casera</h4>
+					<div>
+						<table>
+							<tr>
+								<td>9:45 - 11:15</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Experiencias de montaje de una Impresora 3D casera.</td>
+								<td>Ezequiel Torres Sánchez</td>
+								<td>I.E.S Gran Capitán</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="act17">
+					<h4 title="Charla/Taller sobre realidad aumentada">Realidad Aumentada</h4>
+					<div>
+						<table>
+							<tr>
+								<td>11:40 - 13:40</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Realidad Aumentada.</td>
+								<td>Manuel Jiménez y su alumnado del I.E.S Profesor Tierno Galván</td>
+								<td>I.E.S Gran Capitán</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="act18">
+					<h4 title="Charla introductoria a APIs REST y API de Twitter">Introducción a APIs REST y API de Twitter</h4>
+					<div>
+						<table>
+							<tr>
+								<td>13:40 - 14:40</td>
+								<td><strong>Ponentes:</strong></td>
+								<td><strong>Empresa/organización:</strong></td>
+							</tr>
+							<tr>
+								<td>Introducción a APIs REST y API de Twitter.</td>
+								<td>Antonio León Alcaide</td>
+								<td>SocialBro</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</article>
+		</section>
+		<section id="ponentes">
+			<header>
+				<h2>Listado de ponentes</h2>
+			</header>
+			<div id="img">
+				<ul class="img-ponentes">
+					<li><a href="img/ponentes/2ASIR.png" data-lightbox="ponentes" data-title="Alumnos 2º ASIR"><img src="img/ponentes/2ASIR.png" alt="Alumnos 2º ASIR"></a></li>
+					<li><a href="img/ponentes/RafaelTeran.png" data-lightbox="ponentes" data-title="Rafael Terán"><img src="img/ponentes/RafaelTeran.png" alt="Rafael Terán"></a></li>
+					<li><a href="img/ponentes/JoseIgnacio.jpg" data-lightbox="ponentes" data-title="José Ignacio Álvarez Ruiz"><img src="img/ponentes/JoseIgnacio.jpg" alt="José Ignacio Álvarez Ruiz"></a></li>
+					<li><a href="img/ponentes/FernandoHidalgo.jpg" data-lightbox="ponentes" data-title="Fernando Hidalgo"><img src="img/ponentes/FernandoHidalgo.jpg" alt="Fernando Hidalgo"></a></li>
+					<li><a href="img/ponentes/JuanJose.jpg" data-lightbox="ponentes" data-title="Juan Jose Rider Jimenez"><img src="img/ponentes/JuanJose.jpg" alt="Juan Jose Rider Jimenez"></a></li>
+					<li><a href="img/ponentes/MiguelAngel.png" data-lightbox="ponentes" data-title="Miguel Ángel Arroyo Moreno"><img src="img/ponentes/MiguelAngel.png" alt="Miguel Ángel Arroyo Moreno"></a></li>
+					<li><a href="img/ponentes/MiguelAngelCalero.jpg" data-lightbox="ponentes" data-title="Miguel Ángel Calero Fernández"><img src="img/ponentes/MiguelAngelCalero.jpg" alt="Miguel Ángel Calero Fernández"></a></li>
+					<li><a href="img/ponentes/RaulValentin.jpg" data-lightbox="ponentes" data-title="Raúl Valentín"><img src="img/ponentes/RaulValentin.jpg" alt="Raúl Valentín"></a></li>
+					<li><a href="img/ponentes/MiguelAngelLopez.png" data-lightbox="ponentes" data-title="Miguel Ángel López Torralba"><img src="img/ponentes/MiguelAngelLopez.png" alt="Miguel Ángel López Torralba"></a></li>
+					<li><a href="img/ponentes/AlvaroSerrano.jpg" data-lightbox="ponentes" data-title="Álvaro Serrano García"><img src="img/ponentes/AlvaroSerrano.jpg" alt="Álvaro Serrano García"></a></li>
+					<li><a href="img/ponentes/ClaudiaLopez.jpg" data-lightbox="ponentes" data-title="Claudia López Iglesias"><img src="img/ponentes/ClaudiaLopez.jpg" alt="Claudia López Iglesias"></a></li>
+					<li><a href="img/ponentes/JuanAntonio.jpeg" data-lightbox="ponentes" data-title="Juan Antonio Cubero"><img src="img/ponentes/JuanAntonio.jpeg" alt="Juan Antonio Cubero"></a></li>
+					<li><a href="img/ponentes/PedroRamos.jpeg" data-lightbox="ponentes" data-title="Pedro J. Ramos"><img src="img/ponentes/PedroRamos.jpeg" alt="Pedro J. Ramos"></a></li>
+					<li><a href="img/ponentes/EzequielTorres.png" data-lightbox="ponentes" data-title="Ezequiel Torres Sánchez"><img src="img/ponentes/EzequielTorres.png" alt="Ezequiel Torres Sánchez"></a></li>
+					<li><a href="img/ponentes/ManuelJimenez.jpeg" data-lightbox="ponentes" data-title="Manuel Jiménez"><img src="img/ponentes/ManuelJimenez.jpeg" alt="Manuel Jiménez"></a></li>
+					<li><a href="img/ponentes/AntonioLeon.jpg" data-lightbox="ponentes" data-title="Antonio León Alcaide"><img src="img/ponentes/AntonioLeon.jpg" alt="Antonio León Alcaide"></a></li>
+				</ul>
+			</div>
+		</section>
+		<section id="concursos">
+			<article>
+				<header>
+					<h2>II Concurso Posicionamiento SEO</h2>
+				</header>
+				<div>
+					<p>Dentro de las actividades de la Sysmana 2016 se convoca el segundo concurso de posicionamiento SEO destinado a divulgar estas técnicas entre el alumnado de los ciclos formativos de informática del IES Gran Capitán de Córdoba.</p>
+					<p>El objetivo del concurso es desarrollar un sitio web y lograr el mejor posicionamiento en Google España en castellano en el segmento de Web en general para una palabra o palabras a posicionar, valorándose también la presentación y organización de los contenidos, número de visitantes reales, originalidad y diseño.</p>
+					<p>Las palabras claves elegidas son: <strong>sysmana 2016</strong></p>
+					<p>Para más información: <a href="http://sisblog.iesgrancapitan.org/?p=2625" target="_blank">II Concurso Posicionamiento SEO Sysmana IES Gran Capitán</a></p>
+				</div>
+			</article>
+			<article>
+				<header>
+					<h2>Clasificación definitiva II Concurso Posicionamiento SEO</h2>
+				</header>
+				<div>
+					<p>El II Concurso de Posicionamiento SEO de la Sysmana 2016 ha llegado a su fin. La clasificación final es la siguiente:</p>
+					<table id="clasificacion">
+						<tr>
+							<th style="text-align: center;">Posición</th>
+							<th style="text-align: center;">Página Web</th>
+							<th>Equipo</th>
+						</tr>
+						<tr>
+							<td style="text-align: center;">1ª (=)</td>
+							<td><a href="https://sysmana2016.wordpress.com/" target="_blank">https://sysmana2016.wordpress.com/</a></td>
+							<td>Polo</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">2ª (=)</td>
+							<td><a href="http://sysmana16.blogspot.com.es/" target="_blank">http://sysmana16.blogspot.com.es/</a></td>
+							<td>PJDAW</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">3ª (=)</td>
+							<td><a href="http://sysmana-2016.blogspot.com/" target="_blank">http://sysmana-2016.blogspot.com/</a></td>
+							<td>LechonesDevelopers</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">4ª (=)</td>
+							<td><a href="http://sysmana2016-grancapitan.blogspot.com/" target="_blank">http://sysmana2016-grancapitan.blogspot.com/</a></td>
+							<td>CAPITANSYSMANA2016</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">5ª (=)</td>
+							<td><a href="http://inforduna-sysmana2016.blogspot.com/" target="_blank">http://inforduna-sysmana2016.blogspot.com/</a></td>
+							<td>Duna</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">6ª (+3)</td>
+							<td><a href="http://sysmana2016.blogspot.com/" target="_blank">http://sysmana2016.blogspot.com/</a></td>
+							<td>SYSDAMO_16</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">7ª (-1)</td>
+							<td><a href="http://sysmana.blogspot.com/" target="_blank">http://sysmana.blogspot.com/</a></td>
+							<td>La élite lechona</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">8ª (-1)</td>
+							<td><a href="http://sysadminsysmana2016.blogspot.com/" target="_blank">http://sysadminsysmana2016.blogspot.com/</a></td>
+							<td>Ashbringer</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">9ª (-1)</td>
+							<td><a href="http://sysmana2016.honor.es/" target="_blank">http://sysmana2016.honor.es/</a></td>
+							<td>Curiosidades Sysmana 2016</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">10ª ()</td>
+							<td><a href="http://sysmana2016gcapitan.blogspot.com.es/" target="_blank">http://sysmana2016gcapitan.blogspot.com.es/</a></td>
+							<td>Moloko Team</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">10ª ()</td>
+							<td><a href="https://sysmana2016grancapitan.wordpress.com/" target="_blank">https://sysmana2016grancapitan.wordpress.com/</a></td>
+							<td>Los poderosos</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">10ª ()</td>
+							<td><a href="https://sysmana2016rincondeingwe.wordpress.com/" target="_blank">https://sysmana2016rincondeingwe.wordpress.com/</a></td>
+							<td>The Alone</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">10ª ()</td>
+							<td><a href="https://sysmana2016gc.wordpress.com/" target="_blank">https://sysmana2016gc.wordpress.com/</a></td>
+							<td>ComandoSEO</td>
+						</tr>
+					</table>
+					<p>Desde aquí felicitamos a <strong>Francisco Javier Guerrero Molina</strong> y a <strong>David Peralvo Gómez</strong> del equipo Polo por conseguir acabar el concurso en la primera posición.</p>
+				</div>
+			</article>
+		</section>
+		<section id="eventos">
+			<article>
+				<header>
+					<h2>Carteles de años anteriores</h2>
+				</header>
+				<div id="img">
+					<ul class="img-carteles">
+						<li><img src="img/carteles/sysmana2009.jpg" alt="Sysmana 2009"></li>
+						<li><img src="img/carteles/sysmana2010.jpg" alt="Sysmana 2010"></li>
+						<li><img src="img/carteles/sysmana2011.jpg" alt="Sysmana 2011"></li>
+						<li><img src="img/carteles/sysmana2012.jpg" alt="Sysmana 2012"></li>
+						<li><img src="img/carteles/sysmana2013.jpg" alt="Sysmana 2013"></li>
+						<li><img src="img/carteles/sysmana2014.jpg" alt="Sysmana 2014"></li>
+						<li><img src="img/carteles/sysmana2015.jpg" alt="Sysmana 2015"></li>
+					</ul>
+				</div>
+			</article>
+			<article>
+				<header>
+					<h2>Lipdub IV Sysmana 2012</h2>
+				</header>
+				<div class="video-container">
+					<iframe width="600" height="450" src="https://www.youtube.com/embed/BSxmAflrW9U" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</article>
+		</section>
+		<section id="patrocinadores">
+			<article>
+				<header>
+					<h2>Patrocinadores</h2>
+				</header>
+				<div id="img-patrocinadores">
+					<a href="http://www.iesgrancapitan.org/portal/" target="_blank"><img src="img/patrocinadores/iesgrancapitan.jpg" style="width: 130px; height: 130px"></a>
+					<a href="http://www.uco.es/" target="_blank"><img src="img/patrocinadores/uco.jpg"></a>
+					<a href="http://www.cosfera.es/" target="_blank"><img src="img/patrocinadores/cosfera.png"></a>
+					<a href="http://www.svtcloud.com/" target="_blank"><img src="img/patrocinadores/svtcloud.png"></a>
+					<a href="http://es.socialbro.com/" target="_blank"><img src="img/patrocinadores/socialbro.jpg" style="width: 450px; height: 100px"></a>
+					<a href="http://www.wul4.es/" target="_blank"><img src="img/patrocinadores/wul4.png"></a>
+					<a href="http://sopinet.com/" target="_blank"><img src="img/patrocinadores/sopinet.png" style="width: 130px; height: 130px"></a>
+				</div>
+			</article>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; Realizado por Elisa Navarro Zuara</p>
+	</footer>
+	<a href="#" class="arriba">í</a>
+	<script type="text/javascript" src="js/lightbox.min.js"></script>
+</body>
+</html>

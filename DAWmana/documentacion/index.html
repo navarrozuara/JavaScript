@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Documentación DAWmana</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/documentacion.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+	<!-- Scripts -->
+	<script type="text/javascript" src="../js/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/documentacion.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Documentación DAWmana</h1>
+		<h2>Elisa Navarro Zuara</h2>
+	</header>
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">JavaScript/Cookies</a></li>
+			<li><a href="#tabs-2">Efecto en el inicio</a></li>
+			<li><a href="#tabs-3">Carrusel/LightBox</a></li>
+			<li><a href="#tabs-4">Validación</a></li>
+			<li><a href="#tabs-5">Fechas</a></li>
+			<li><a href="#tabs-6">jQuery UI</a></li>
+		</ul>
+		<div id="tabs-1">
+			<h2>JavaScript</h2>
+			<p>Para comprobar si JavaScript está activo o no en el navegador tenemos que utilizar la etiqueta noscript.</p>
+			<img src="img/imagen5.png">
+			<h2>Cookies</h2>
+			<p>Para comprobar si el navegador tiene las cookies activas vamos a utilizar la propiedad cookieEnabled del objeto navigator. Esta propiedad nos devolverá true en el caso de que las cookies estén activas y false en el caso de que no estén activas mostrando un mensaje informativo al usuario.</p>
+			<img src="img/imagen6.png">
+			<p>Aparecerá el siguiente mensaje informativo con un botón de aceptar para que el usuario puede quitar el mensaje del navegador.</p>
+			<img src="img/imagen7.png" style="width: 90%;">
+		</div>
+		<div id="tabs-2">
+			<h2>Efecto en el inicio</h2>
+			<p>En la página de inicio aparecerá el cartel de la Sysmana 2016, para ello hemos aplicado unos efectos. Primero oculto el cartel mediante el efecto hide() para que esté oculto al usuario, luego aplico al propio cartel un efecto show() con la propiedad explode para mostrarlo y por último voy ocultando el cartel con el efecto fadeOut().</p>
+			<img src="img/imagen8.png">
+		</div>
+		<div id="tabs-3">
+			<h2>Carrusel de imágenes</h2>
+			<p>Para implementar el carrusel de imágenes utilizaremos la librería pgwslideshow, debemos descargarla de la página oficial <a href="http://pgwjs.com/pgwslideshow/" target="_blank">PgwSlideshow</a>.</p>
+			<p>Para utilizarla hay que linkear el archivo .css y el archivo .js de la librería en el head.</p>
+			<img src="img/imagen9.png">
+			<img src="img/imagen10.png">
+			<p>Ahora debemos crear el grupo de imágenes que formarán el carrusel, debemos implementarlo mediante una lista de imágenes que utilizaran el atributo <strong>alt</strong> para especificar el título de la misma.</p>
+			<img src="img/imagen11.png">
+			<p>Una vez implementado, la visualización de las imágenes será la siguiente:</p>
+			<img src="img/imagen12.png">
+			<h2>LightBox de imágenes</h2>
+			<p>Para implementar el lightbox de imágenes utilizaremos la librería lightbox2, debemos descargarla de la página oficial <a href="http://lokeshdhakar.com/projects/lightbox2/" target="_blank">Lightbox</a>.</p>
+			<p>Para utilizarla hay que linkear el archivo .css en el head y el archivo .js de la librería al final del body. Además hay que situar la carpeta images en la ruta correspondiente para hacer uso de las imágenes que uitliza lightbox.</p>
+			<img src="img/imagen13.png">
+			<img src="img/imagen14.png">
+			<p>Para usarlo en un grupo de imágenes tendremos que usar el atributo <strong>data-lightbox</strong> que sirve para agrupar a todas las imágenes pertenecientes al mismo lightbox.</p>
+			<img src="img/imagen11.png">
+			<p>Una vez implementado, la visualización de las imágenes será la siguiente:</p>
+			<img src="img/imagen15.png">
+		</div>
+		<div id="tabs-4">
+			<h2>Validación</h2>
+			<p>Para la validación de los formularios he utilizado el plugin jQuery Validation, debemos descargarlo de la página oficial <a href="http://jqueryvalidation.org/" target="_blank">jQuery Validation Plugin</a>.</p>
+			<p>La sintaxis utilizada es la siguiente:</p>
+			<ol>
+				<li>Utilizamos el método validate del formulario.</li>
+				<li>Asignamos las reglas que aplicaremos a cada campo. El nombre de los parámetros ha de coincidir con el atributo name de los input.</li>
+				<li>Las reglas más utilizadas son:
+					<ul>
+						<li>required: especificamos que el campo sea obligatorio.</li>
+						<li>minlength: especificamos la longitud mínima que debe tener el campo.</li>
+						<li>min: especificamos el valor mínimo del campo.</li>
+						<li>number: especificamos que el campo es solo de tipo numérico.</li>
+					</ul>
+				</li>
+				<li>También asignamos los mensajes de error en función del tipo de error.</li>
+			</ol>
+			<img src="img/imagen16.png">
+			<p>En caso de producirse un error en el formulario, los errores se mostrarían de la siguiente forma:</p>
+			<img src="img/imagen17.png">
+		</div>
+		<div id="tabs-5">
+			<h2>Fechas</h2>
+			<p>Para el control de fechas he utilizado un widget de JQuery UI llamado Datepicker.</p>
+			<img src="img/imagen18.png">
+			<p>Los parámetros de consiguración utilizados son:</p>
+			<ul>
+				<li>dateFormat: para indicar el formato en dd-mm-yy.</li>
+				<li>minDate: para indicar la fecha mínima.</li>
+				<li>maxDate: para indicar la fecha máxima.</li>
+				<li>dayNames: para especificar el nombre de los días.</li>
+				<li>dayNamesMin: para especificar el nombre de los días.</li>
+				<li>monthNames: para especificar el nombre de los meses.</li>
+				<li>monthNamesShort: para especificar el nombre de los meses.</li>
+				<li>showAnim: para que semuestre con una animación.</li>
+			</ul>
+			<p>Con el método onClose() activamos el datepicker de la fecha de fin y además le enviamos el día seleccionado, para que no se pueda seleccionar un día anterior al mismo.</p>
+			<img src="img/imagen19.png">
+		</div>
+		<div id="tabs-6">
+			<h2>jQuery UI</h2>
+			<p>La versión de JQuery UI utilizada ha sido la 1.11.4 customizando el contenido de elementos que vamos a necesitar.</p>
+			<img src="img/imagen20.png">
+			<img src="img/imagen21.png">
+			<h2>Theme</h2>
+			<p>Hemos seleccionado el tema base y he añadido las modificaciones necesarias para mi página.</p>
+			<img src="img/imagen1.png">
+			<img src="img/imagen2.png">
+			<img src="img/imagen3.png">
+			<img src="img/imagen4.png">
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,303 @@
+@font-face {
+	font-family: 'Sosa';
+	src: url('../fonts/sosa-regular-webfont.eot');
+	src: url('../fonts/sosa-regular-webfont.eot?iefix') format('eot'),
+		 url('../fonts/sosa-regular-webfont.ttf') format('truetype'),
+		 url('../fonts/sosa-regular-webfont.woff') format('woff'),
+		 url('../fonts/sosa-regular-webfont.svg') format('svg');
+}
+
+* {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+}
+
+#aceptar {
+	background: rgba(255,0,0,0.6);
+	border: none;
+	color: #FFFFFF;
+	display: inline-block;
+	padding: 0.2em 0.4em;
+	text-decoration: none;
+}
+
+#act1, #act2, #act3, #act4, #act5, #act6, #act7, #act8, #act9, #act10, #act11, #act12, #act13, #act14, #act15, #act16, #act17, #act18 {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.annadir, .modificar {
+	background: #009688;
+	border: none;
+	color: #FFFFFF;
+}
+
+.arriba {
+	background: rgba(0, 0, 0, 0.8);
+	border-radius: 50px;
+	bottom: 1em;
+	color: #FFFFFF;
+	display: none;
+	font-family: 'Sosa';
+	font-size: 18px;
+	font-weight: bold;
+	padding: 1em;
+	position: fixed;
+	right: 1em;
+	text-decoration: none;
+}
+
+.arriba:hover {    
+	background: rgba(255, 255, 255, 0.8);
+	color: #000000;
+}
+
+body {
+	background: #F2F2F2;
+}
+
+button {
+	display: block;
+	margin: 0 auto;
+	padding: 0.5em 1em;
+}
+
+#cabezera {
+	background: url('../img/fondo.jpg') no-repeat center fixed;
+	background-position: 0% 0%;
+	background-size: cover;
+}
+
+#cabezera h1, #pcabezera h1 {
+	padding-top: 1em;
+}
+
+#cabezera h1, #cabezera h2, #pcabezera h1, #pcabezera h2 {
+	color: #FFFFFF;
+}
+
+#cartel {
+	height: 550px;
+	margin: 0 auto;
+}
+
+#clasificacion {
+	margin: 2em 0 1em 0;
+	width: 65%;
+}
+
+#clasificacion td {
+	padding: 0.5em;
+}
+
+#clasificacion td a, #concursos a {
+	color: #000000;
+	text-decoration: none;
+}
+
+#clasificacion td a:hover, #concursos a:hover {
+	text-decoration: underline;
+}
+
+#clasificacion th {
+	text-transform: uppercase;
+	padding-bottom: 0.5em;
+}
+
+#clasificacion tr {
+	border-bottom-style: double;
+}
+
+#contenido {
+	margin: 2em auto;
+	width: 90%;
+}
+
+#concursos {
+	padding: 1em;
+	text-align: justify;
+}
+
+#concursos div {
+	padding: 2em;
+}
+
+#concursos p {
+	font-size: 16px;
+	padding-top: 1em;
+}
+
+#cookies {
+	display: none;
+	padding: 0.4em;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index: 2;
+}
+
+dl {
+	display: block;
+	float: left;
+	padding: 0 1em;
+	text-align: left;
+	width: 100%;
+}
+
+dt {
+	font-weight: bold;
+}
+
+.error {
+	color: #FF0000;
+}
+
+footer {
+	background: rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+	color: #FFFFFF;
+	padding: 2em;
+	text-align: center;
+}
+
+#form-registro p, #form-login p, #form-mod p, #form-act p {
+	margin-top: 0.5em;
+}
+
+#url {
+	padding-left: 1em;
+}
+
+#group-form {
+	display: inline-block;
+	padding-left: 1em;
+}
+
+h1, h2 {
+	font-size: 45.5px;
+	font-weight: 300;
+}
+
+h3 {
+	margin: 1em;
+	font-weight: 300;
+}
+
+header {
+	padding-top: 4em;
+	text-align: center;
+}
+
+#icon {
+	font-family: 'Sosa';
+}
+
+#inicio {
+	padding-top: 1.5em;
+	text-align: center;
+}
+
+input {
+	border: none;
+	border-bottom: 1px solid #EEEEEE;
+	padding-top: 0.2em;
+}
+
+#img {
+	margin: 2em auto auto auto;
+	width: 80%;
+}
+
+#img a {
+	text-decoration: none;
+}
+
+#img-cartel {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+}
+
+#img-patrocinadores {
+	margin: 2em auto auto auto;
+	text-align: center;
+}
+
+#img-patrocinadores img {
+	padding: 0.5em;
+}
+
+label, input {
+	display: block;
+	width: 250px;
+}
+
+label {
+	padding-top: 0.5em;
+}
+
+nav {
+	background: rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+nav ul {
+	display: inline-block;
+}
+
+nav ul li {
+	display: inline-block;
+	list-style: none;
+	padding: 1em;
+}
+
+nav ul li a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+nav ul li:hover {
+	background: rgba(255,255,255,1);
+}
+
+nav ul li:hover a {
+	color: #000000;
+}
+
+#panel-login {
+	display: inline-block;
+	float: right;
+	padding: 1em;
+}
+
+#panel-login a {
+	color: #FFFFFF;
+	padding-right: 1em;
+	text-decoration: none;
+}
+
+#pcabezera {
+	background: url('../img/fondo2.jpg') no-repeat center fixed;
+	background-position: 0% 0%;
+	background-size: cover;
+}
+
+#tabs {
+	margin: 2em auto auto auto;
+	width: 70%;
+}
+
+td {
+	padding-right: 1em;
+	width: 350px;
+}
+
+.video-container {
+	margin: 2em auto auto auto;
+	text-align: center;
+}

@@ -1,0 +1,16 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background: #F2F2F2;
+}
+
+header {
+	text-align: center;
+}
+
+#tabs {
+	margin: 0 auto;
+	width: 95%;
+}
