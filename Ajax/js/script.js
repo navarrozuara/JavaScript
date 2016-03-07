@@ -1,7 +1,7 @@
 (function() {
 
 	var peticion_http;
-	var arrEstados = ['READY_STATE_UNINITIALIZED', 'READY_STATE_LOADING', 'READY_STATE_LOADED', 'READY_STATE_INTERACTIVE', 'READY_STATE_COMPLETE'];
+	var arrEstados = ['No inicializado', 'Cargando', 'Cargado', 'Interactivo', 'Completo'];
 
 	function cargaContenido(url, metodo, funcion) {
 		peticion_http = new XMLHttpRequest();
@@ -28,7 +28,7 @@
 	}
 
 	function muestraCodigoEstado() {
-		codigo.innerHTML = peticion_http.status + "<br />" + peticion_http.statusText;
+		codigo.innerHTML = peticion_http.status + ' --> ' + peticion_http.statusText;
 	}
 
 	window.addEventListener('load', function() {
