@@ -28,7 +28,7 @@
 	}
 
 	function muestraCodigoEstado() {
-		codigo.innerHTML = peticion_http.status + ' --> ' + peticion_http.statusText;
+		codigo.innerHTML += peticion_http.status + ' --> ' + peticion_http.statusText;
 	}
 
 	window.addEventListener('load', function() {
