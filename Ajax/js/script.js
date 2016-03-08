@@ -14,7 +14,6 @@
 
 	function muestraContenido() {
 		estados.innerHTML += peticion_http.readyState + ' --> ' + arrEstados[peticion_http.readyState] + '<br />';
-		estados.innerHTML += '<br />';
 		if (peticion_http.readyState == 4) {
 			if(peticion_http.status == 200) {
 				contenidos.innerHTML = peticion_http.responseText;
