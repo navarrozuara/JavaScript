@@ -37,10 +37,17 @@
 			estados = document.getElementById('estados'),
 			cabeceras = document.getElementById('cabeceras'),
 			codigo = document.getElementById('codigo'),
+			limpiar = document.getElementById('limpiar'),
 			mostrar = document.getElementById('enviar');
 		recurso.value = location.href;
 		mostrar.addEventListener('click', function() {
 			cargaContenido(recurso.value, 'GET', muestraContenido);
+		});
+		limpiar.addEventListener('click', function() {
+			contenidos.innerHTML = '';
+			estados.innerHTML = '';
+			cabeceras.innerHTML = '';
+			codigo.innerHTML = '';
 		});
 	});
 
