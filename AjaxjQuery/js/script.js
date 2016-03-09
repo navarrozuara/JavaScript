@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(function() {
 
-	var recurso = $('recurso');
-	var contenidos = $('contenidos');
-	var	estados = $('estados');
-	var	limpiar = $('limpiar');
-	var	mostrar = $('enviar');
+	var recurso = $('#recurso');
+	var contenidos = $('#contenidos');
+	var estados = $('#estados');
+	var limpiar = $('#limpiar');
+	var mostrar = $('#enviar');
 
 	recurso.val($(location).attr('href'));
 
